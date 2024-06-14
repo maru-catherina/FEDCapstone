@@ -1,38 +1,107 @@
 .App {
   text-align: center;
+  max-width: 70%;
+  margin: 0 auto; /* This centers the container horizontally */
+  padding: 0 15px; /* Optional: Add padding for space around the content */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.NavigationBar {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-between;
+  background-color: #EDEFEE;
+  padding: 10px 20px; /* Example padding */
+  height: 40px;
+}
+
+.NavigationBar-logo-img {
+  height: 35px; /* Adjust height as needed */
+}
+
+.NavigationBar-nav {
+  list-style-type: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.NavigationBar-nav-item {
+  margin-right: 10px; /* Adjust spacing between items */
+  font-size: 14px; 
+  font-weight: bold;
+  padding: auto;
+}
+
+.NavigationBar-nav-item:last-child {
+  margin-right: 0; /* Remove margin from last item */
+}
+
+.NavigationBar-nav-item a {
+  text-decoration: none;
+  color: #333333;
+  padding: 10px;
+}
+
+.NavigationBar-nav-item a:hover {
+  text-decoration: underline; /* Example hover effect */
+}
+
+
+.HeroSection {
+  background-color: #495e57; /* Example background color */
+  padding: 40px 20px; /* Adjust padding as needed */
+  height: 280px;
+}
+
+.HeroSection-content {
+  display: flex;
+  flex-direction: column; /* Stack items vertically on small screens */
+  align-items: center; /* Center items horizontally */
+}
+.HeroSection-text h1 {
+  color: #F4CE14;
+}
+.HeroSection-text {
+  text-align: center; /* Center text content */
+  margin-bottom: 20px; /* Add some space between text and image */
   color: white;
 }
+.HeroSection-text button {
+  color: black;
+  background-color: #F4CE14;
+  border-radius: 15px;
+margin-top: 10px;
+  padding: 10px 20px 10px 20px;
 
-.App-link {
-  color: #61dafb;
+}
+.HeroSection-image img {
+  max-width: 100%; /* Ensure image does not exceed container width */
+  height: auto; /* Maintain aspect ratio */
+  max-height: 300px; /* Set a maximum height to constrain image size */
+  margin-top: 20px; /* Add space between text and image */
+
+  /* Clip the image to a square shape */
+  clip-path: inset(0 round 20px); /* Adjust the inset and radius as needed */
+
+  /* Add rounded corners */
+  border-radius: 20px; /* Match the radius of the clip-path for consistency */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+
+
+@media (min-width: 768px) {
+  .HeroSection-content {
+    flex-direction: row; /* Arrange items in a row on larger screens */
+    justify-content: space-between; /* Space out items */
+    align-items: flex-start; /* Align items to the top */
   }
-  to {
-    transform: rotate(360deg);
+ .HeroSection-image img {
+    max-width: 80%; /* Limit image width on larger screens */
+    margin-top: 0; /* Remove top margin on larger screens */
   }
+  .HeroSection-text {
+    max-width: 50%; /* Limit text width on larger screens */
+    text-align: left; /* Align text to the left */
+  }
+
 }
