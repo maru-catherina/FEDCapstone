@@ -10,8 +10,10 @@ const CallToAction = () => {
           <h1>Little Lemon</h1>
           <h2>Chicago</h2>
           <p>We are a familly owned Mediterranean restaurant, focused on traditional recipes served with a modern twist.</p>
-           <button>Reserve a Table</button>
-        </div>
+          <a href="/reserve" className="heroLink" class= "button">Reserve a table now!</a>
+          
+           </div>
+        
         <div className="CallToAction-image">
           <img src={heroImage} width="300px" alt="Call T Action" />
         </div>

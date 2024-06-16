@@ -11,10 +11,10 @@ const NavigationBar = () => {
       </div>
       <ul className="NavigationBar-nav">
         <li className="NavigationBar-nav-item"><Link to="/">Home</Link></li>
-        <li className="NavigationBar-nav-item"><Link to="/about">About</Link></li>
-        <li className="NavigationBar-nav-item"><Link to="/menu">Menu</Link></li>
-        <li className="NavigationBar-nav-item"><Link to="/booking">Reservation</Link></li>
-        <li className="NavigationBar-nav-item"><Link to="/order">Order Online</Link></li>
+        
+        
+        <li className="NavigationBar-nav-item"><Link to="/reserve">Reservation</Link></li>
+       
         <li className="NavigationBar-nav-item"><Link to="/login">Login</Link></li>
       </ul>
     </nav>

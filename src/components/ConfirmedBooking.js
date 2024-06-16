@@ -1,12 +1,19 @@
-import React from 'react';
+import NavigationBar from "./NavigationBar";
 
-const ConfirmedBooking = () => {
+
+
+function ConfirmedBooking() {
+
   return (
-    <div>
-      <h1>Your booking is confirmed!</h1>
-      <p>Thank you for booking with us. We look forward to serving you.</p>
-    </div>
+    <>
+      <NavigationBar/>
+      <main className='confirmedBooking'>
+          <h2>Thank you for Reserving a Table.</h2>
+          <p>Please check your email for further details.</p>
+      </main>
+     
+    </>
   );
-};
+}
 
 export default ConfirmedBooking;

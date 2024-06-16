@@ -1,23 +1,22 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Reserve from './pages/Reserve';
 import HomePage from './pages/HomePage';
-import BookingPage from './pages/BookingPage';
-import NavigationBar from './components/NavigationBar';
-import './App.css';
+import ConfirmedBooking from './components/ConfirmedBooking'
+
+import '../src/App.css';
 
 function App() {
   return (
-    <Router>
-      <div className="App">
-        <NavigationBar />
-        <main>
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/booking/*" element={<BookingPage />} />
-          </Routes>
-        </main>
-      </div>
-    </Router>
+    <>
+      <BrowserRouter>
+      <Routes>
+      <Route path="/" element={<HomePage />}/>
+      <Route path="/reserve" element={<Reserve />}/>
+      <Route path="/confirmed" element={<ConfirmedBooking />}/>
+      </Routes>
+    </BrowserRouter>
+    </>
   );
 }
 
