@@ -47,26 +47,26 @@
 }
 
 
-.HeroSection {
+.CallToAction {
   background-color: #495e57; /* Example background color */
   padding: 40px 20px; /* Adjust padding as needed */
   height: 280px;
 }
 
-.HeroSection-content {
+.CallToAction-content {
   display: flex;
   flex-direction: column; /* Stack items vertically on small screens */
   align-items: center; /* Center items horizontally */
 }
-.HeroSection-text h1 {
+.CallToAction-text h1 {
   color: #F4CE14;
 }
-.HeroSection-text {
+.CallToAction-text {
   text-align: center; /* Center text content */
   margin-bottom: 20px; /* Add some space between text and image */
   color: white;
 }
-.HeroSection-text button {
+.CallToAction-text button {
   color: black;
   background-color: #F4CE14;
   border-radius: 15px;
@@ -74,7 +74,7 @@ margin-top: 10px;
   padding: 10px 20px 10px 20px;
 
 }
-.HeroSection-image img {
+.CallToAction-image img {
   max-width: 100%; /* Ensure image does not exceed container width */
   height: auto; /* Maintain aspect ratio */
   max-height: 300px; /* Set a maximum height to constrain image size */
@@ -90,18 +90,162 @@ margin-top: 10px;
 
 
 @media (min-width: 768px) {
-  .HeroSection-content {
+  .CallToAction-content {
     flex-direction: row; /* Arrange items in a row on larger screens */
     justify-content: space-between; /* Space out items */
     align-items: flex-start; /* Align items to the top */
   }
- .HeroSection-image img {
+  .CallToAction-image img {
     max-width: 80%; /* Limit image width on larger screens */
     margin-top: 0; /* Remove top margin on larger screens */
   }
-  .HeroSection-text {
+  .CallToAction-text {
     max-width: 50%; /* Limit text width on larger screens */
     text-align: left; /* Align text to the left */
   }
 
+}
+.SpecialsSection {
+  text-align: center;
+  padding: 20px;
+  margin: 50px;
+}
+
+.SpecialsSection-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.SpecialsSection-button {
+  padding: 10px 20px;
+  background-color: #ff6347;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.SpecialsSection-cards {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.SpecialsSection-card {
+  background-color: white;
+  padding: 0px;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  max-width: 30%;
+  flex: 1 1 30%;
+  text-align: left;
+}
+
+.SpecialsSection-card-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.SpecialsSection-card-price {
+  font-weight: bold;
+}
+
+.SpecialsSection-order-link {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  color: #ff6347;
+  text-decoration: none;
+}
+
+.SpecialsSection-order-link::after {
+  content: url('icons_assets/Basket.svg'); /* Replace with the path to your icon */
+  margin-left: 5px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .SpecialsSection-header {
+    flex-direction: column;
+  }
+
+  .SpecialsSection-cards {
+    flex-direction: column;
+  }
+
+  .SpecialsSection-card {
+    max-width: 100%;
+    flex: 1 1 100%;
+  }
+}
+
+.BookingForm {
+  display: grid;
+  max-width: 400px;
+  gap: 20px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.BookingForm label {
+  font-weight: bold;
+}
+
+.BookingForm input,
+.BookingForm select,
+.BookingForm button {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.BookingForm button {
+  background-color: #ff6347;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.BookingForm button:hover {
+  background-color: #e55337;
+}
+.BookingForm {
+  display: grid;
+  max-width: 400px;
+  gap: 20px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.BookingForm label {
+  font-weight: bold;
+}
+
+.BookingForm input,
+.BookingForm select,
+.BookingForm button {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.BookingForm button {
+  background-color: #ff6347;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.BookingForm button:hover {
+  background-color: #e55337;
 }

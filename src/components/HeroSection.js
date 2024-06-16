@@ -1,6 +1,6 @@
 import React from 'react';
-import heroImage from './icons_assets/restauranfood.jpg'; 
-import './App.css'; // Import your CSS file for HeroSection styling
+import heroImage from './icons_assets/restauranfood.jpg';
+import '../App.css'; // Import your CSS file for HeroSection styling
 
 const HeroSection = () => {
   return (
